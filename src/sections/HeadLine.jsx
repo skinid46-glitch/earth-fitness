@@ -1,58 +1,43 @@
 import React from "react";
 
 const HeadLine = () => {
-    const communityImage =
-  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=85";
-    return (
-        <section
-            id="about"
-            className="w-full bg-[#F4F4F0] text-black px-5 sm:px-8 md:px-12 py-20 md:py-28"
-        >
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+  return (
+    <section
+      id="about"
+      className="w-full bg-white text-black flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-[clamp(60px,8vw,110px)] text-center overflow-hidden"
+    >
+      <p className="text-[#315b42] font-montserrat font-extrabold tracking-[0.25em] text-xs md:text-sm mb-5">
+        ABOUT EARTH FITNESS
+      </p>
 
-                <div>
-                    <p className="text-sm font-black uppercase tracking-[0.25em] text-[#6B7E22] mb-5">
-                        The Fitfusion Experience
-                    </p>
+      <h1 className="font-nudge text-[clamp(30px,5vh,58px)] md:text-[clamp(38px,5vh,64px)] leading-[1.15] tracking-[0.1rem] max-w-[900px]">
+        Stronger Every Day.
+        <br />
+        <span className="text-[#315b42]">A Better You Starts Here.</span>
+      </h1>
 
-                    <h2 className="font-black uppercase leading-[0.95] tracking-tight text-[clamp(38px,5.5vw,68px)]">
-                        Stronger
-                        <br />
-                        <span className="text-[#8AAE00]">Together.</span>
-                    </h2>
+      <p className="mt-6 max-w-[720px] text-[clamp(13px,1.1vw,16px)] font-Work font-medium leading-[1.8] text-gray-700">
+        Welcome to Earth Fitness, a fitness centre in Kamod, Ahmedabad.
+        Whether your goal is to build strength, improve stamina, manage
+        your weight or feel healthier, find a workout routine that helps
+        you keep moving forward.
+      </p>
 
-                    <p className="mt-7 text-gray-600 leading-[1.8] text-sm sm:text-base max-w-xl">
-                        Build consistency, challenge yourself and enjoy
-                        training with a community that keeps you motivated.
-                        Whether you enjoy independent workouts or coached
-                        group sessions, make every session count.
-                    </p>
+      <a
+        href="tel:+919909912509"
+        className="py-4 px-7 bg-[#E8FE61] rounded-full mt-8 font-montserrat font-extrabold text-sm hover:scale-105 transition duration-200"
+      >
+        Talk To Our Team →
+      </a>
 
-                    <a
-                        href="#services"
-                        className="inline-flex mt-8 bg-black text-white font-bold px-7 py-4 rounded-full hover:bg-[#8AAE00] hover:text-black transition"
-                    >
-                        Discover Training →
-                    </a>
-                </div>
-
-                <div className="relative">
-                    <div className="absolute -top-4 -right-4 w-28 h-28 bg-[#D7FF3F] rounded-full" />
-                    <img
-                        src={communityImage}
-                        alt="Fitfusion Studio community and group training"
-                        className="relative z-10 w-full h-[330px] sm:h-[440px] object-cover rounded-2xl shadow-2xl"
-                    />
-                    <div className="absolute -bottom-5 -left-5 z-20 bg-[#D7FF3F] px-6 py-5 rounded-xl">
-                        <p className="font-black text-2xl">MOVE.</p>
-                        <p className="font-black text-2xl">GROW.</p>
-                        <p className="font-black text-2xl">REPEAT.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    );
+      <img
+        src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1600&q=85"
+        alt="Fitness training environment"
+        loading="lazy"
+        className="mt-12 w-full max-w-[1000px] h-[250px] sm:h-[400px] object-cover rounded-2xl shadow-xl"
+      />
+    </section>
+  );
 };
 
 export default HeadLine;

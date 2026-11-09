@@ -1,95 +1,104 @@
 import React from "react";
-import { Dumbbell, Users, Activity, HeartPulse, Target, Zap } from "lucide-react";
+import {
+  Dumbbell,
+  Users,
+  HeartPulse,
+  Scale,
+  Salad,
+  Activity,
+  Trophy,
+} from "lucide-react";
+
+const services = [
+  {
+    icon: Dumbbell,
+    title: "Strength Training",
+    description:
+      "Work towards greater strength with resistance exercises and structured strength-training routines.",
+  },
+  {
+    icon: Users,
+    title: "Group Fitness Classes",
+    description:
+      "Stay motivated and enjoy exercising with others through group fitness sessions.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Cardio & Endurance",
+    description:
+      "Improve cardiovascular fitness, build stamina and make movement part of your daily routine.",
+  },
+  {
+    icon: Scale,
+    title: "Weight Management",
+    description:
+      "Work towards your weight-management goals with exercise guidance and consistent training.",
+  },
+  {
+    icon: Salad,
+    title: "Nutrition Guidance",
+    description:
+      "Explore nutrition guidance and meal-planning support to complement your fitness routine.",
+  },
+  {
+    icon: Activity,
+    title: "Functional & Sports Training",
+    description:
+      "Build movement, coordination and fitness with functional exercises and sports-focused training.",
+  },
+  {
+    icon: Trophy,
+    title: "Personal Training",
+    description:
+      "Get individual attention and workout guidance to help you work towards your personal goals.",
+  },
+];
 
 const Services = () => {
-    const services = [
-        {
-            icon: Dumbbell,
-            title: "Strength Training",
-            description: "Build strength and improve your fitness through structured resistance workouts.",
-        },
-        {
-            icon: Users,
-            title: "Group Workouts",
-            description: "Train alongside others in energetic sessions that keep you motivated.",
-        },
-        {
-            icon: Zap,
-            title: "HIIT-Style Training",
-            description: "Challenge your stamina with high-intensity training and varied workout formats.",
-        },
-        {
-            icon: Activity,
-            title: "Conditioning",
-            description: "Work on endurance, movement and overall physical performance.",
-        },
-        {
-            icon: HeartPulse,
-            title: "Yoga & Mobility",
-            description: "Support flexibility, balance and recovery with mindful movement sessions.",
-        },
-        {
-            icon: Target,
-            title: "Personal Guidance",
-            description: "Get support and motivation as you work towards your individual fitness goals.",
-        },
-    ];
+  return (
+    <section
+      id="services"
+      className="w-full bg-[#eff5ef] px-5 sm:px-8 md:px-16 lg:px-20 py-16 md:py-24 flex flex-col items-center gap-6"
+    >
+      <p className="text-[#315b42] font-montserrat font-extrabold tracking-[0.2em] text-xs md:text-sm">
+        TRAIN YOUR WAY
+      </p>
 
-    return (
-        <section
-            id="services"
-            className="w-full bg-[#101010] text-white px-5 sm:px-8 md:px-12 py-20 md:py-28"
-        >
-            <div className="max-w-7xl mx-auto">
+      <h1 className="text-black font-nudge font-bold tracking-wider text-center text-[clamp(28px,4vw,50px)]">
+        Our Fitness Services
+      </h1>
 
-                <div className="max-w-2xl mb-12 md:mb-16">
-                    <p className="text-[#D7FF3F] text-sm font-bold uppercase tracking-[0.25em] mb-4">
-                        Train Your Way
-                    </p>
+      <p className="text-black/70 font-Work font-medium text-sm md:text-lg leading-relaxed max-w-[680px] text-center">
+        From strength and cardio to group workouts and personal
+        guidance, explore ways to work towards your fitness goals.
+      </p>
 
-                    <h2 className="font-black uppercase leading-tight text-[clamp(34px,5vw,60px)]">
-                        Built Around
-                        <span className="text-[#D7FF3F]"> Your Goals.</span>
-                    </h2>
+      <div className="w-full max-w-[1100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+        {services.map((service) => {
+          const Icon = service.icon;
 
-                    <p className="text-white/60 mt-5 leading-relaxed">
-                        Find the right way to move, build strength and stay
-                        consistent with a range of training experiences.
-                    </p>
-                </div>
+          return (
+            <div
+              key={service.title}
+              className="bg-white text-black rounded-2xl p-7 shadow-sm border border-black/5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-[#315b42] text-lime-300 flex items-center justify-center mb-6">
+                <Icon size={25} />
+              </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {services.map((service, index) => {
-                        const Icon = service.icon;
+              <h2 className="font-nudge text-xl tracking-wide mb-3">
+                {service.title}
+              </h2>
 
-                        return (
-                            <div
-                                key={index}
-                                className="group bg-[#1B1B1B] border border-white/10 rounded-2xl p-7 md:p-8 hover:bg-[#D7FF3F] hover:text-black transition-all duration-300"
-                            >
-                                <div className="w-14 h-14 rounded-xl bg-[#D7FF3F] text-black flex items-center justify-center group-hover:bg-black group-hover:text-[#D7FF3F] transition">
-                                    <Icon size={27} />
-                                </div>
-
-                                <h3 className="font-black text-xl mt-7 mb-3">
-                                    {service.title}
-                                </h3>
-
-                                <p className="text-white/60 group-hover:text-black/70 leading-relaxed text-sm">
-                                    {service.description}
-                                </p>
-
-                                <div className="mt-7 text-[#D7FF3F] group-hover:text-black font-black text-2xl">
-                                    0{index + 1}
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-
+              <p className="font-Work text-sm leading-relaxed text-gray-600">
+                {service.description}
+              </p>
             </div>
-        </section>
-    );
+          );
+        })}
+      </div>
+    </section>
+  );
 };
 
 export default Services;

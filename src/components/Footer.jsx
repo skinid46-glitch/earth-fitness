@@ -1,149 +1,92 @@
-import React from "react";
-import { Mail, Phone, MapPin, Dumbbell, Clock } from "lucide-react";
+import { Phone, Dumbbell, MapPin, Clock } from "lucide-react";
 
-const phoneNumber = "919537956135";
+export default function Footer() {
+  const phone = "+919909912509";
 
-const Footer = () => {
-    return (
-        <section id="contact" className="bg-[#101010] text-white">
+  const address =
+    "2nd Floor, Satyamev Complex, Kamod, Ahmedabad, Gujarat 382427";
 
-            <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+  const mapUrl =
+    "https://www.google.com/maps/search/?api=1&query=EARTH+FITNESS+2nd+Floor+Satyamev+Complex+Kamod+Ahmedabad+Gujarat+382427";
 
-                <div className="grid md:grid-cols-2 gap-12">
-
-                    <div>
-                        <a href="#home" className="inline-flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-xl bg-[#D7FF3F] text-black flex items-center justify-center">
-                                <Dumbbell size={28} />
-                            </div>
-
-                            <div>
-                                <p className="font-black text-xl">FITFUSION</p>
-                                <p className="text-[#D7FF3F] text-xs font-bold tracking-[0.3em]">
-                                    STUDIO
-                                </p>
-                            </div>
-                        </a>
-
-                        <h2 className="font-black uppercase text-[clamp(32px,4vw,48px)] leading-tight mt-10">
-                            Make Your
-                            <br />
-                            <span className="text-[#D7FF3F]">Move.</span>
-                        </h2>
-
-                        <p className="text-white/60 max-w-md mt-5 leading-relaxed">
-                            Find your strength, enjoy the energy of group
-                            training and keep moving towards your goals.
-                        </p>
-
-                        <div className="flex flex-wrap gap-3 mt-8">
-                            <a
-                                href={`https://wa.me/${phoneNumber}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-[#D7FF3F] text-black font-extrabold px-6 py-4 rounded-full hover:bg-white transition"
-                            >
-                                WhatsApp Us →
-                            </a>
-
-                            <a
-                                href={`tel:+${phoneNumber}`}
-                                className="border border-white/30 text-white font-bold px-6 py-4 rounded-full hover:border-[#D7FF3F] hover:text-[#D7FF3F] transition"
-                            >
-                                Call The Studio
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="bg-[#1B1B1B] border border-white/10 rounded-2xl p-6 sm:p-8">
-
-                        <h3 className="text-2xl font-black mb-7">
-                            Get In Touch
-                        </h3>
-
-                        <div className="space-y-5">
-
-                            <a
-                                href={`tel:+${phoneNumber}`}
-                                className="flex items-center gap-4 text-white/80 hover:text-[#D7FF3F] transition"
-                            >
-                                <div className="w-11 h-11 rounded-xl bg-[#D7FF3F] text-black flex items-center justify-center">
-                                    <Phone size={20} />
-                                </div>
-                                <div>
-                                    <p className="text-white/40 text-xs uppercase tracking-wider">
-                                        Phone
-                                    </p>
-                                    <p className="font-bold">+91 95379 56135</p>
-                                </div>
-                            </a>
-
-                            <div className="flex items-center gap-4">
-                                <div className="w-11 h-11 rounded-xl bg-[#D7FF3F] text-black flex items-center justify-center">
-                                    <Clock size={20} />
-                                </div>
-                                <div>
-                                    <p className="text-white/40 text-xs uppercase tracking-wider">
-                                        Listed Hours
-                                    </p>
-                                    <p className="font-bold">Mon–Sat: 6 AM–10 PM</p>
-                                    <p className="text-white/50 text-sm">Sunday: Closed</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-11 h-11 rounded-xl bg-[#D7FF3F] text-black flex items-center justify-center shrink-0">
-                                    <MapPin size={20} />
-                                </div>
-                                <div>
-                                    <p className="text-white/40 text-xs uppercase tracking-wider">
-                                        Address
-                                    </p>
-                                    <p className="font-bold leading-relaxed">
-                                        2nd Floor, Sarthik Complex,
-                                        Iskcon Cross Rd, Satellite,
-                                        Ahmedabad, Gujarat 380015
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+  return (
+    <section id="contact">
+      <footer className="w-full bg-gradient-to-br from-[#102f25] via-[#194b36] to-[#102f25] text-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-center">
+            <div className="md:col-span-3 flex justify-center md:justify-start">
+              <a href="#home" className="flex items-center gap-2.5">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-lime-300 text-[#102f25]">
+                  <Dumbbell size={27} strokeWidth={2.8} />
                 </div>
 
-                <div className="mt-14 border-t border-white/10 pt-8">
-                    <h3 className="font-black text-lg mb-5">Find The Studio</h3>
-
-                    <div className="overflow-hidden rounded-2xl border border-white/10">
-                        <iframe
-                            title="Fitfusion Studio location map"
-                            src="https://www.google.com/maps?q=Fitfusion%20Studio%2C%202nd%20Floor%2C%20Sarthik%20Complex%2C%20Iskcon%20Cross%20Rd%2C%20Satellite%2C%20Ahmedabad%2C%20Gujarat%20380015&output=embed"
-                            width="100%"
-                            height="350"
-                            style={{ border: 0 }}
-                            loading="lazy"
-                            allowFullScreen
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
-                    </div>
-
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=Fitfusion+Studio+2nd+Floor+Sarthik+Complex+Iskcon+Cross+Road+Satellite+Ahmedabad"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block mt-4 text-[#D7FF3F] font-bold hover:text-white transition"
-                    >
-                        Get Directions →
-                    </a>
+                <div className="flex flex-col leading-none">
+                  <span className="text-white font-black text-xl">
+                    EARTH
+                  </span>
+                  <span className="text-lime-300 font-extrabold text-[10px] tracking-[0.25em] mt-1.5">
+                    FITNESS
+                  </span>
                 </div>
-
-                <div className="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-sm">
-                    © {new Date().getFullYear()} Fitfusion Studio. All rights reserved.
-                </div>
-
+              </a>
             </div>
-        </section>
-    );
-};
 
-export default Footer;
+            <div className="md:col-span-5 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+                Train Hard.
+                <span className="text-lime-300"> Live Strong.</span>
+              </h2>
+
+              <p className="text-green-100 text-sm md:text-base leading-relaxed max-w-xl">
+                Your fitness journey starts here. Visit Earth Fitness
+                at Satyamev Complex, Kamod, Ahmedabad.
+              </p>
+            </div>
+
+            <div className="md:col-span-4">
+              <div className="bg-white text-gray-800 rounded-2xl p-6 md:p-7 shadow-lg">
+                <h3 className="text-3xl font-extrabold mb-6">
+                  Contact Us
+                </h3>
+
+                <a
+                  href={`tel:${phone}`}
+                  className="flex items-center gap-3 bg-lime-300 hover:bg-lime-200 rounded-xl px-4 py-4 mb-3 font-bold text-sm"
+                >
+                  <Phone size={20} />
+                  +91 99099 12509
+                </a>
+
+                <div className="flex items-start gap-3 bg-gray-100 rounded-xl px-4 py-4 text-sm font-medium leading-relaxed mb-3">
+                  <MapPin className="shrink-0 mt-0.5 text-[#315b42]" />
+                  <span>{address}</span>
+                </div>
+
+                <div className="flex items-center gap-3 bg-gray-100 rounded-xl px-4 py-4 text-sm font-medium">
+                  <Clock className="shrink-0 text-[#315b42]" />
+                  <span>Listed hours: 5:30 AM – 10:00 PM</span>
+                </div>
+
+                <a
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center mt-5 font-bold text-[#315b42] hover:underline"
+                >
+                  Get Directions →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 mt-10 pt-6">
+            <p className="text-green-100/70 text-sm text-center">
+              © {new Date().getFullYear()} Earth Fitness. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
+  );
+}
